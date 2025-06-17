@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+/* Custom Mouse Effects */
+.mouse-follower {
+    mix-blend-mode: difference;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.1s;
+    will-change: transform;
+  }
+  
+  .mouse-dot {
+    mix-blend-mode: difference;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.1s;
+    will-change: transform;
+  }
+  
+  body:hover .mouse-follower,
+  body:hover .mouse-dot {
+    opacity: 1;
+  }
